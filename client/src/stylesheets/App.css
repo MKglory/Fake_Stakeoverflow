@@ -1,0 +1,631 @@
+/* Add your CSS here */
+/* Add CSS stylesheet */
+body {
+    background-color: azure;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+button, a{
+    cursor:pointer
+}
+
+#main, #frame{
+    height: 100%;
+    width: 100%;
+}
+
+#header{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(168, 167, 167);
+    border: 1px solid black;
+}
+#username{
+    position: fixed;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 60px;
+    background-color:aliceblue;
+}
+
+#logoutBtn, #username pre{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+#header h1{
+    font-size: 30px;
+    text-align: center;
+}
+#header_search_input{
+    width:15%;
+    height: 45%;
+    font-size: 15px;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 15%;
+    margin-top: 80px;
+    padding-top: 50px;
+    height: 100%;
+    /* background-color:blueviolet; */
+    border-right: 2px dotted grey;
+    overflow: hidden;
+}
+
+#Menu_btn_deactive{
+    width: 100%;
+    color :rgba(0, 0, 255, 0.746);
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#Menu_btn_active{
+    width: 100%;
+    color :rgba(0, 0, 255, 0.746);
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: rgba(128, 128, 128, 0.478);
+}
+#menu button:hover{
+background-color: rgba(128, 128, 128, 0.478);
+}
+/* #menu #questions_button{
+background-color:  rgba(128, 128, 128, 0.478);
+} */
+
+/* body for rest */
+#frame{
+    margin-left: 15%;
+    padding-top: 80px;
+    height: 90%;
+    width: 85%;
+    overflow: hidden;
+    overflow-y: scroll;   
+    overflow-x: hidden;
+    /* background-color: aqua; */
+}
+#sub_header{
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+#sub_header h3{
+    font-size: 30px;
+    margin: 30px;
+    width: 50%;
+}
+.askQuestion_div{
+    width: 50%;
+    /* background-color: burlywood; */
+}
+.askQuestion{
+    float: right;
+    font-size: 17px;
+    text-align: center;
+    margin: 20px;
+    margin-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    height: 30%;
+    background-color:rgb(0, 153, 255);
+    color: white;
+}
+
+#sub_header2{
+    display: flex;
+    /* background-color:antiquewhite; */
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted black;
+    overflow: hidden;
+    overflow-y: scroll;   
+    overflow-x: hidden;
+}
+#sub_header2 p{
+    font-size: 23px;
+    margin: 30px;
+    /* background-color: blueviolet; */
+    width: 40%;
+}
+#sub_header2 #sort_bottons{
+    display: inline;
+    margin-top: 35px;
+    margin-left: 60px;
+    display:flex;
+}
+#sort_bottons button{
+    height: 25px;
+    margin: 0;
+    border: 1px solid black;
+}
+
+
+/* questions list */
+#pose_question{
+    display: flex;
+    /* border-top: 1px dotted black; */
+    border-bottom: 2px dotted black;
+    /* background-color: coral; */
+    /* height: 100px; */
+    padding-bottom: 10px;
+    width: 100%;
+}
+.ans_view{
+    flex:1;
+    color:grey;
+    padding-top: 20px;
+    width: 100px;
+    /* background-color: aquamarine; */
+}
+.ans_view p{
+    margin: 0;
+    text-align: center;
+}
+.question{
+    flex:6;
+    display: inline-block;
+    padding-left: 10px;
+    width: 60%;
+    /* background-color: beige; */
+}
+.question h2{
+    color :rgba(18, 18, 250, 0.92);
+    margin-bottom: 10px;
+}
+.attributes ul{
+    margin: 0;
+    padding: 0;
+}
+.attributes li{
+    display: inline-block;
+    color:white;
+    background-color:rgb(85, 85, 85);
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 5px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.pose_time{
+    padding-left: 10px;
+
+    flex :2;
+    padding-top: 25px;
+    width: 210px;
+    /* background-color: aquamarine; */
+}
+.pose_time p{
+    display: inline;
+    color:grey;
+}
+p.name{
+    color: red;
+}
+#questionListBtns, #commentsListBtn{
+    padding-bottom: 10px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-top: 10px;
+
+}
+#questionListBtns button{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: medium;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+/* tags frame */
+#tags_header{
+    display: flex;
+}
+#tags_header h2{
+    padding-top: 20px;
+    flex:1;
+    /* border:  1px solid beige; */
+    text-align: center;
+
+}
+#tags_askQuestion_div{
+    padding-top: 20px;
+    flex:1;
+    text-align: center;
+    float: right;
+}
+#tags_askQuestion_div button{
+    flex:1;
+    font-size: 17px;
+    text-align: center;
+    margin: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    height: 30%;
+    background-color:rgb(0, 153, 255);
+    color: white;
+}
+.tags_container{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 90px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.tags_item{
+    padding: 15px 25px 15px 25px;
+    border: 1px dashed black;
+    text-align: center;
+    width: 100px;
+}
+.tags_item a{
+    color:rgb(0, 72, 255);
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+}
+.tags_item p{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* Question answer page */
+#question_page_subHeader {
+    display:flex;
+    padding-top: 20px;
+    height: 150px;
+}
+#question_page_subHeader h3{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+} 
+#question_page_subHeader2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom:30px ;
+    border-bottom: 1px dashed black;
+}
+#question_page_subHeader2 h3{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: inherit;
+}
+.pose_time_answer_page{
+    width: 20%;
+}
+.pose_time_answer_page p{
+    margin: 0;
+    padding: 0;
+}
+#answer_in_question_answer_page{
+    display: flex;
+    border-top: 1px dotted black;
+}
+#answer_page_text{
+    flex: 8;
+    font-size: large;
+    padding: 20px;
+    width: 80%;
+}
+#answerQuestion{
+    height: 50px;
+    margin: 40px;
+    border: 1px solid black;
+    background-color:rgb(0, 153, 255);
+    color: white;
+}
+.ansBy{
+    color:darkgreen;
+}
+#answer_page_askBy{
+    flex:2;
+    padding-top: 30px;
+}
+#answer_page_askBy p{
+    padding: 0;
+    margin: 0;
+}
+.post_answer_button{
+    font-size: 17px;
+    text-align: center;
+    margin: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    height: 40px;
+    background-color:rgb(0, 153, 255);
+    color: white;
+    border: 1 solid black;
+}
+#CommentsDiv{
+    background-color:beige;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+#eachComment{
+    border: 1px dotted black;
+    border-radius: 50px;
+    padding: 15px;
+    display: flex;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin: 5px;
+
+}
+#commentNextPrevBtn{
+    padding: 10px;
+}
+#commentNextPrevBtn button{
+    background-color: aqua;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5px;
+
+}
+#eachCommentText{
+    flex: 8;
+
+}
+#commentPoseBy{
+    flex:2;
+    background-color: aqua;
+    float: right;
+}
+#upDownVoteBtns button{
+}
+#addComment{
+    color: grey;
+    padding: 10px;
+}
+#addCommentDiv button{
+    padding: 10px;
+    background-color:rgb(0, 153, 255);
+    color:aliceblue;
+    font-size: 15px;
+    margin-left: 5%;
+}
+#commentInput{
+    width: 70%;
+    height: 100px;
+}
+
+
+
+
+/* Ask question page below */
+.ask_question_input{
+    margin-left: 20%;
+    width: 60%;
+}
+#ask_question_input1, #ask_question_input4{
+    height: 50px;
+    margin-top: -10px;
+}
+#ask_question_input2{
+    margin-top: -10px;
+    height: 300px;
+}
+#ask_question_input3{
+    margin-top: -10px;
+    height: 200px;
+}
+#ask_question_frame button{
+    background-color:rgb(0, 98, 255);
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+}
+#ask_question_frame .error{
+    color:red;
+    padding-left: 20%;
+}
+
+
+/* Pose answer page below */
+.answer_question_input{
+    margin-left: 20%;
+    width: 60%;
+}
+#answer_question_input1{
+    height: 50px;
+    margin-top: -10px;
+}
+#answer_question_input2{
+    margin-top: -10px;
+    height: 200px;
+}
+#answer_question_frame button{
+    background-color:rgb(0, 153, 255);
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+}
+#answer_question_frame .error{
+    color:red;
+    padding-left: 20%;
+}
+
+/* Welcome Page */
+#homePageBtn{
+    margin-top: 30px;
+    display: grid;
+    justify-content: center; /* Centers elements horizontally */
+    align-items: center; /* Centers elements vertically (if needed) */
+    width: 50%;
+    margin-left: 25%;
+    height: 200px; /* Example height, adjust as needed */
+}
+#homePageBtn button{
+    overflow: hidden;
+    font-size: 20px;
+    width: 100%;
+    background-color:aquamarine;
+    height: 40px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Login Page */
+#home{
+    position: fixed;
+    width: 50%;
+    height: 70%;
+    margin-top: 10%;
+    margin-left: 25%;
+    border: 1px solid black;
+    background-color: ghostwhite;
+    
+}
+#loginBox{
+    padding-top: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loginBox form{
+    width: 50%
+}
+#loginBox h3{
+    width:100%;
+    margin-bottom: 5px;
+}
+#loginBox input, #registerBox input{
+    width: 100%;
+    height: 20px;
+}
+#homeButton button{
+    margin-top: 20px;
+    display: block;
+}
+#loginAlter{
+    margin-top: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 25%;
+    background-color: blanchedalmond;
+    border: 1px solid orange;
+}
+#loginAlter p{
+    font-size: large;
+    font-weight: bold;
+}
+
+#registerBox{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 5%; */
+}
+#registerBox form{
+    width: 50%
+}
+
+#UserProfile{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#UserProfile h1{
+    font-size: 35px;
+}
+
+#UserProfile-question{
+    border: 1px solid black;
+    background-color: white;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+#UserProfile-answer{
+    border: 1px solid black;
+    background-color: white;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+#UserProfile-tags{
+    background-color:white;
+    border: 1px solid black;
+    /* padding-left: 1%;
+    padding-right: 1%; */
+}
+.profile_tags_container{
+    /* padding-top: 20px; */
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 90px;
+    padding-right: 20px;
+}
+.profile_tags_item{
+    background-color: pink;
+    /* padding: 5px 25px 15px 25px; */
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px dashed black;
+    text-align: center;
+    width: 100px;
+}
+
+#AdminProfile{
+    background-color:aliceblue;
+    margin: 20px;
+    padding-left: 20px;
+    border: 2px solid black;
+}
